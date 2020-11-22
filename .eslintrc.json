@@ -1,0 +1,18 @@
+{
+  "env": {
+      "node": true,
+      "es2021": true,
+      "mocha": true
+  },
+  "extends": [
+      "airbnb-base/legacy"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "prefer-template": 1,
+    "prefer-const": 1,
+    "max-len": ["error", 120]
+  }
+}

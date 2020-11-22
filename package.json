@@ -1,0 +1,42 @@
+{
+  "name": "cryptocurrenciesmonitor",
+  "version": "1.0.0",
+  "description": "Repository for WChallenge - William Salazar",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "nyc mocha --timeout 20000 --exit test/**/**Test.js"
+  },
+  "author": "srwilliamg@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coingecko-api": "^1.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "nyc": "^15.1.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6"
+  },
+  "_moduleAliases": {
+    "@src": "./src",
+    "@config": "./src/config",
+    "@middlewares": "./src/middlewares",
+    "@utils": "./src/utils",
+    "@models": "./src/models",
+    "@healthCheck": "./src/entities/healthCheck"
+  }
+}
