@@ -5,10 +5,14 @@
     "paths": {
       "@src/*": ["src/*"],
       "@config/*": ["src/config/*"],
+      "@constants/*": ["src/constants/*"],
       "@middlewares/*": ["src/middlewares/*"],
       "@utils/*": ["src/utils/*"],
       "@models/*": ["src/models/*"],
       "@healthCheck/*": ["src/entities/healthCheck/*"],
+      "@user/*": ["src/entities/user/*"],
+      "@coin/*": ["src/entities/coins/*"],
+      "@authentication/*": ["src/authentication/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

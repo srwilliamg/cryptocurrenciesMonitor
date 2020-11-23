@@ -2,7 +2,7 @@
 
 const HttpUtils = module.exports;
 
-HttpUtils.baseRequestHandler = (handler) => async (req, res, next) => {
+HttpUtils.requestHandler = (handler) => async (req, res, next) => {
   try {
     await handler(req, res, next);
   } catch (error) {
