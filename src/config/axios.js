@@ -1,5 +1,6 @@
 'use strict';
 
+const { HttpError } = require('@src/utils/ErrorUtils');
 /* eslint-disable no-console */
 const axios = require('axios');
 
@@ -15,8 +16,13 @@ axiosConfig.initAxios = () => {
   };
 
   const rejectResponse = error => {
-    console.error('Intercept: ', error);
-    return Promise.reject(error);
+    const { message, response: { status } } = error;
+    const messageError = { status, message };
+
+    if (!status && !message) return Promise.reject(new HttpError());
+
+    console.error('Intercept: ', messageError);
+    return Promise.reject(messageError);
   };
 
   axios.interceptors.response.use(getResponse, rejectResponse);

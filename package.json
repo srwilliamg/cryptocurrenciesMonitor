@@ -4,6 +4,7 @@
   "description": "Repository for WChallenge - William Salazar",
   "main": "server.js",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "nyc mocha --timeout 20000 --exit test/**/**Test.js"
   },
