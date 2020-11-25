@@ -1,8 +1,6 @@
 'use strict';
 
-const jwt = require('jsonwebtoken');
-
-const { SECRET_KEY } = process.env;
+const TokenUtils = require('@utils/TokenUtils');
 
 const { Model } = require('sequelize');
 
@@ -24,8 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     async generateToken() {
       // eslint-disable-next-line camelcase
       const { id, username, last_name } = this;
-      const token = jwt.sign({ id, username, last_name }, SECRET_KEY, { expiresIn: 60 * 60 });
-      return token;
+      return TokenUtils.getToken({ id, username, last_name });
     }
 
     getPublicData() {

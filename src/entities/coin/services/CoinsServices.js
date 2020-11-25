@@ -11,19 +11,28 @@ CurrencyServices.getCoinsList = async () => {
   return coinsList;
 };
 
-CurrencyServices.createCoin = async (user, coinId) => {
-  const coinDetail = await CoinGeckoUtils.getCoinDetail(coinId);
+CurrencyServices.createCoin = async ({ id: userId }, requestCoinId) => {
+  const coinDetail = await CoinGeckoUtils.getCoinDetail(requestCoinId);
 
-  const { preferred_currency: userPreferredCurrency } = user;
   const {
-    id, symbol, name, last_updated: lastUpdated, market_data: { current_price: currentPrice }, image
+    id: coinId, symbol, name, last_updated: lastUpdated, market_data: { current_price: currentPrice }, image
   } = coinDetail;
 
-  const preferredCurrentPrice = currentPrice[userPreferredCurrency];
+  const { eur: priceEur, usd: priceUsd, ars: priceArs } = currentPrice;
 
-  const createdCoin = await CoinModel.create({
-    user_id: user.id, coin_id: id, symbol, price: preferredCurrentPrice, name, image: JSON.stringify(image), last_updated: lastUpdated
-  });
+  const coinToCreate = {
+    user_id: userId,
+    coin_id: coinId,
+    symbol,
+    price_eur: priceEur,
+    price_usd: priceUsd,
+    price_ars: priceArs,
+    name,
+    image: JSON.stringify(image),
+    last_updated: lastUpdated
+  };
+
+  const createdCoin = await CoinModel.create(coinToCreate);
 
   return createdCoin;
 };

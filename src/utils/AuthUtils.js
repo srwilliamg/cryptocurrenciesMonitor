@@ -2,13 +2,13 @@
 
 const jwt = require('jsonwebtoken');
 
-const { SECRET_KEY } = process.env;
 const { user: UserModel } = require('@models/index');
 const { NotFoundError } = require('./ErrorUtils');
 
 const AuthUtils = module.exports;
 
 const BEARER = 'Bearer ';
+const { SECRET_KEY } = process.env;
 
 AuthUtils.verifyToken = async (token) => {
   const filteredToken = token.replace(BEARER, '');

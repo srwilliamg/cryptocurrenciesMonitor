@@ -28,7 +28,13 @@ module.exports = {
       symbol: {
         type: Sequelize.STRING
       },
-      price: {
+      price_ars: {
+        type: Sequelize.FLOAT
+      },
+      price_usd: {
+        type: Sequelize.FLOAT
+      },
+      price_eur: {
         type: Sequelize.FLOAT
       },
       name: {

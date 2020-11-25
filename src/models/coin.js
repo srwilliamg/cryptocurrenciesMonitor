@@ -32,7 +32,9 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     symbol: DataTypes.STRING,
-    price: DataTypes.FLOAT,
+    price_ars: DataTypes.FLOAT,
+    price_usd: DataTypes.FLOAT,
+    price_eur: DataTypes.FLOAT,
     name: DataTypes.STRING,
     image: DataTypes.STRING,
     last_updated: DataTypes.DATE
