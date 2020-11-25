@@ -21,11 +21,15 @@ module.exports = {
           key: 'id'
         }
       },
+      coin_id: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       symbol: {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       name: {
         type: Sequelize.STRING

@@ -6,9 +6,10 @@ const { requestHandler } = require('@utils/HttpUtils');
 
 const CoinsControllers = require('./controllers/CoinsControllers');
 
-const CurrencyRouter = express.Router();
+const CoinRouter = express.Router();
 
-CurrencyRouter.get('/', requestHandler(CoinsControllers.getCoinsList));
-CurrencyRouter.post('/:coinId/', requestHandler(CoinsControllers.createCoin));
+CoinRouter.get('/', requestHandler(CoinsControllers.getCoinsList));
+CoinRouter.post('/:coinId', requestHandler(CoinsControllers.createCoin));
+CoinRouter.delete('/:coinId(\\d+)', requestHandler(CoinsControllers.deleteCoin));
 
-module.exports = CurrencyRouter;
+module.exports = CoinRouter;

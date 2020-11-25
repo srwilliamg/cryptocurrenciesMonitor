@@ -1,18 +1,35 @@
 'use strict';
 
-const CoinsControllers = module.exports;
+const SchemaUtils = require('@utils/SchemaUtils');
 
 const CoinsServices = require('../services/CoinsServices');
+const CreateCoinSchema = require('../schemas/CreateCoinSchema');
+const DeleteCoinSchema = require('../schemas/DeleteCoinSchema');
+
+const CoinsControllers = module.exports;
 
 CoinsControllers.getCoinsList = async (req, res) => {
-  const currency = await CoinsServices.getCoinsList();
+  const coinList = await CoinsServices.getCoinsList();
+
+  res.send(coinList);
+};
+
+CoinsControllers.createCoin = async (req, res) => {
+  const { user, params, params: { coinId } } = req;
+
+  SchemaUtils.validateSchema(CreateCoinSchema, params);
+
+  const currency = await CoinsServices.createCoin(user, coinId);
 
   res.send(currency);
 };
 
-CoinsControllers.createCoin = async (req, res) => {
-  const { user, params: { coinId } } = req;
-  const currency = await CoinsServices.createCoin(user, coinId);
+CoinsControllers.deleteCoin = async (req, res) => {
+  const { user, params, params: { coinId } } = req;
 
-  res.send(currency);
+  SchemaUtils.validateSchema(DeleteCoinSchema, params);
+
+  await CoinsServices.deleteCoin(user, coinId);
+
+  res.status(204).send();
 };

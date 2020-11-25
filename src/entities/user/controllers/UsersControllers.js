@@ -1,8 +1,11 @@
 'use strict';
 
-const UsersControllers = module.exports;
+const SchemaUtils = require('@utils/SchemaUtils');
 
 const UsersServices = require('../services/UsersServices');
+const CreateUsersSchema = require('../schemas/CreateUsersSchema');
+
+const UsersControllers = module.exports;
 
 UsersControllers.getUserCoins = async (req, res) => {
   const { user } = req;
@@ -13,6 +16,8 @@ UsersControllers.getUserCoins = async (req, res) => {
 
 UsersControllers.createUser = async (req, res) => {
   const { body: userData } = req;
+
+  SchemaUtils.validateSchema(CreateUsersSchema, userData);
 
   const createdUser = await UsersServices.createUser(userData);
 
