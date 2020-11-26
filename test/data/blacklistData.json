@@ -1,0 +1,19 @@
+{
+  "blacklist": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ3aWxsIiwibGFzdF9uYW1lIjoiRG9lIiwiaWF0IjoxNjA2MzUyMTUyLCJleHAiOjE2MDYzNTU3NTJ9.ffOP0Rif6rbXakbFDBQEdCVmRsB8q8LTQNOAkxfa8Y4",
+      "createdAt": "2020-11-26T00:55:57.392Z",
+      "updatedAt": "2020-11-26T00:55:57.392Z"
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ3aWxsIiwibGFzdF9uYW1lIjoiRG9lIiwiaWF0IjoxNjA2MzU0MTQ1LCJleHAiOjE2MDYzNTc3NDV9.8OvkOeW0ROBZ9-XZ_Ruhg5VwZ6-PsuBR_jsJHLaws4U",
+      "createdAt": "2020-11-26T01:29:13.183Z",
+      "updatedAt": "2020-11-26T01:29:13.183Z"
+    },
+    {
+      "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ3aWxsIiwibGFzdF9uYW1lIjoiRG9lIiwiaWF0IjoxNjA2MzU0MTQ1LCJleHAiOjE2MDYzNTc3NDV9.8OvkOeW0ROBZ9-XZ_Ruhg5VwZ6-PsuBR_jsJHLaws4U",
+      "createdAt": "2020-11-26T01:29:28.079Z",
+      "updatedAt": "2020-11-26T01:29:28.079Z"
+    }
+  ]
+}

@@ -5,8 +5,8 @@ const { USER } = require('../constants/DatabaseConstants');
 module.exports = {
   up: async (queryInterface) => {
     await queryInterface.bulkInsert(USER, [{
-      name: 'John',
-      last_name: 'Doe',
+      name: 'William',
+      last_name: 'Salazar',
       password: '1234',
       username: 'will',
       preferred_currency: 'ars',

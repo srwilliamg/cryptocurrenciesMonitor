@@ -13,20 +13,23 @@ module.exports = {
     database: DB_NAME,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: DB_DIALECT
+    dialect: DB_DIALECT,
+    logging: false
   },
   test: {
     username: DB_USER,
     password: DB_SECRET,
     database: DB_NAME,
     host: DB_HOST,
-    dialect: DB_DIALECT
+    dialect: DB_DIALECT,
+    logging: false
   },
   production: {
     username: DB_USER,
     password: DB_SECRET,
     database: DB_NAME,
     host: DB_HOST,
-    dialect: DB_DIALECT
+    dialect: DB_DIALECT,
+    logging: false
   }
 };

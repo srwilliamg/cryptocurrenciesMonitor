@@ -1,0 +1,59 @@
+{
+  "coin": [
+    {
+      "user_id": 1,
+      "coin_id": "yusd-synthetic-token-expiring-31-december-2020",
+      "symbol": "uUSDwETH-DEC",
+      "price_ars": 81.39,
+      "price_usd": 1.01,
+      "price_eur": 0.847892,
+      "name": "uUSDwETH Synthetic Token Expiring 31 December 2020",
+      "image": "{\"large\": \"https:\/\/assets.coingecko.com\/coins\/images\/12584\/large\/uma_logo.jpg?1600937972\", \"small\": \"https:\/\/assets.coingecko.com\/coins\/images\/12584\/small\/uma_logo.jpg?1600937972\", \"thumb\": \"https:\/\/assets.coingecko.com\/coins\/images\/12584\/thumb\/uma_logo.jpg?1600937972\"}",
+      "last_updated": "2020-11-25T01:04:13.149Z"
+    },
+    {
+      "user_id": 1,
+      "coin_id": "yocoin",
+      "symbol": "yoc",
+      "price_ars": 0.03794369,
+      "price_usd": 4.7023E-4,
+      "price_eur": 3.95E-4,
+      "name": "Yocoin",
+      "image": "{\"large\": \"https:\/\/assets.coingecko.com\/coins\/images\/341\/large\/yocoin.png?1548761114\", \"small\": \"https:\/\/assets.coingecko.com\/coins\/images\/341\/small\/yocoin.png?1548761114\", \"thumb\": \"https:\/\/assets.coingecko.com\/coins\/images\/341\/thumb\/yocoin.png?1548761114\"}",
+      "last_updated": "2020-11-25T03:24:08.117Z"
+    },
+    {
+      "user_id": 1,
+      "coin_id": "bitor",
+      "symbol": "btr",
+      "price_ars": 0.00187632,
+      "price_usd": 2.337E-5,
+      "price_eur": 1.976E-5,
+      "name": "Bitor",
+      "image": "{\"large\": \"https:\/\/assets.coingecko.com\/coins\/images\/9853\/large\/logo_%283%29.png?1572595521\", \"small\": \"https:\/\/assets.coingecko.com\/coins\/images\/9853\/small\/logo_%283%29.png?1572595521\", \"thumb\": \"https:\/\/assets.coingecko.com\/coins\/images\/9853\/thumb\/logo_%283%29.png?1572595521\"}",
+      "last_updated": "2020-11-23T15:27:04.791Z"
+    },
+    {
+      "user_id": 1,
+      "coin_id": "bitstash-marketplace",
+      "symbol": "stash",
+      "price_ars": 7.0754E-4,
+      "price_usd": 8.88E-6,
+      "price_eur": 7.5E-6,
+      "name": "BitStash Marketplace",
+      "image": "{\"large\": \"https:\/\/assets.coingecko.com\/coins\/images\/7674\/large\/bitstash.png?1555301765\", \"small\": \"https:\/\/assets.coingecko.com\/coins\/images\/7674\/small\/bitstash.png?1555301765\", \"thumb\": \"https:\/\/assets.coingecko.com\/coins\/images\/7674\/thumb\/bitstash.png?1555301765\"}",
+      "last_updated": "2020-11-15T20:25:36.583Z"
+    },
+    {
+      "user_id": 1,
+      "coin_id": "bns-token",
+      "symbol": "bns",
+      "price_ars": 3.69,
+      "price_usd": 0.04568781,
+      "price_eur": 0.03838032,
+      "name": "BNS Token",
+      "image": "{\"large\": \"https:\/\/assets.coingecko.com\/coins\/images\/11926\/large\/HS7eNJdt_400x400.jpg?1596170654\", \"small\": \"https:\/\/assets.coingecko.com\/coins\/images\/11926\/small\/HS7eNJdt_400x400.jpg?1596170654\", \"thumb\": \"https:\/\/assets.coingecko.com\/coins\/images\/11926\/thumb\/HS7eNJdt_400x400.jpg?1596170654\"}",
+      "last_updated": "2020-11-25T03:29:25.850Z"
+    }
+  ]
+}

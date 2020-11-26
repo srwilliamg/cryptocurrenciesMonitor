@@ -2,7 +2,6 @@
 
 module.exports = {
   USER: 'user',
-  CURRENCY: 'currency',
   BLACKLIST: 'blacklist',
   COIN: 'coin'
 };

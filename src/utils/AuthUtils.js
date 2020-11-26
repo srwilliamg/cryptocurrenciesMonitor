@@ -23,5 +23,5 @@ AuthUtils.verifyToken = async (token) => {
     throw new NotFoundError();
   }
 
-  return { ...user.getPublicData(), filteredToken };
+  return { ...user.getPublicData(), token: filteredToken };
 };

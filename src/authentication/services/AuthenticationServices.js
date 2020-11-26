@@ -1,7 +1,7 @@
 'use strict';
 
 const { user: UserModel, blacklist: BlacklistModel } = require('@models/index');
-const { UnauthorizedError, BadRequestError } = require('@utils/ErrorUtils');
+const { UnauthorizedError, BadRequestError, ForbiddenError } = require('@utils/ErrorUtils');
 const AuthUtils = require('@utils/AuthUtils');
 
 const AuthenticationServices = module.exports;
@@ -31,7 +31,7 @@ AuthenticationServices.authenticateToken = async (token) => {
 
   const tokenExist = await BlacklistModel.findOne({ where: { token } });
 
-  if (tokenExist) throw new BadRequestError('User already logged out');
+  if (tokenExist) throw new ForbiddenError('Not valid token');
 
   return user;
 };

@@ -2,17 +2,15 @@
 
 const { Model } = require('sequelize');
 
-const uniqueCoinId = coin => {
-  return async (value, next) => {
-    const exist = await coin.findOne({
-      where: { coin_id: value },
-      attributes: ['coin_id']
-    });
+const uniqueCoinId = async (CoinModel, value, userId, next) => {
+  const exist = await CoinModel.findOne({
+    where: { user_id: userId, coin_id: value },
+    attributes: ['coin_id']
+  });
 
-    if (exist) next(`You already have a coin type: ${value}`);
+  if (exist) next(`You already have a coin type: ${value}`);
 
-    next();
-  };
+  next();
 };
 
 module.exports = (sequelize, DataTypes) => {
@@ -28,7 +26,11 @@ module.exports = (sequelize, DataTypes) => {
     coin_id: {
       type: DataTypes.STRING,
       validate: {
-        isUnique: uniqueCoinId(coin)
+        // eslint-disable-next-line func-names
+        isUnique: function (value, next) {
+          const { user_id: userId } = this;
+          return uniqueCoinId(coin, value, userId, next);
+        }
       }
     },
     symbol: DataTypes.STRING,
