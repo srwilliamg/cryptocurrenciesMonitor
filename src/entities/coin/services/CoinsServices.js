@@ -37,8 +37,8 @@ CurrencyServices.createCoin = async ({ id: userId }, requestCoinId) => {
   return createdCoin;
 };
 
-CurrencyServices.deleteCoin = async ({ user_id: userId }, coinId) => {
-  const userCoin = await CoinModel.findOne({ user_id: userId, id: coinId });
+CurrencyServices.deleteCoin = async ({ id: userId }, coinId) => {
+  const userCoin = await CoinModel.findOne({ where: { user_id: userId, id: coinId } });
 
   if (!userCoin) throw new NotFoundError('Coin not found');
 
