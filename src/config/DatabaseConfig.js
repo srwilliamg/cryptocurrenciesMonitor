@@ -3,7 +3,7 @@
 require('dotenv').config();
 
 const {
-  DB_HOST, DB_NAME, DB_USER, DB_SECRET, DB_PORT, DB_DIALECT
+  DB_HOST, DB_NAME, DB_USER, DB_SECRET, DB_PORT
 } = process.env;
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     database: DB_NAME,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: DB_DIALECT,
+    dialect: 'postgres',
     logging: false
   },
   test: {
@@ -21,7 +21,8 @@ module.exports = {
     password: DB_SECRET,
     database: DB_NAME,
     host: DB_HOST,
-    dialect: DB_DIALECT,
+    port: DB_PORT,
+    dialect: 'postgres',
     logging: false
   },
   production: {
@@ -29,7 +30,8 @@ module.exports = {
     password: DB_SECRET,
     database: DB_NAME,
     host: DB_HOST,
-    dialect: DB_DIALECT,
+    port: DB_PORT,
+    dialect: 'postgres',
     logging: false
   }
 };

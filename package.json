@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "nyc mocha --timeout 20000 --exit test/**/**Test.js"
+    "test": "nyc mocha --timeout 20000 --exit test/**/**Test.js",
+    "seed": "node -e 'require(\"./test/testUtils/databaseUtils.js\").insertData()'"
   },
   "author": "srwilliamg@gmail.com",
   "license": "ISC",
