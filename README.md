@@ -10,12 +10,14 @@
 - Rename *.env.example* to *.env* and change the default values
 - Execute __npm install__
 - For local: execute __npm install --also-dev__
+- make sure to execute __npm install -g sequelize sequelize-cli__
 - execute __sequelize db:create__ to create the database.
 - execute __sequelize db:migrate__
 - to add seed data execute __npm run seed__ 
 - execute server __npm run dev__ or __npm start__
 
-### Unit test
+### Unit test with coverage
+- __npm install -g mocha sinon nodemon__
 - execute __npm test__
 ### Postman endpoints
 - In postman you could import the file call 'endpoints_Test.postman_collection.json' to test the endpoint
@@ -82,6 +84,7 @@
   > List all coins from Gecko 
   - __GET__ /coins/
   - You should add in the Headers (Authorization, TOKEN)
+  - Here you get the __coinGeckoId__ used in the endpoint *Create coin*
   - example: __GET__ localhost:3000/coins
 
   > Create coin
